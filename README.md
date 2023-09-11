@@ -39,6 +39,7 @@ The README.md Generator is a Node.js application that prompts users with questio
 
 ```bash
 git clone https://github.com/dustinii/README-generator.git
+```
 
 2. Navigate to the project directory:
 
