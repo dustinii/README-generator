@@ -1,4 +1,4 @@
-//
+// return license badge
 function renderLicenseBadge(license) {
   if (!license) {
     return ''
@@ -6,7 +6,7 @@ function renderLicenseBadge(license) {
   return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
 }
 
-//
+// return license link
 function renderLicenseLink(license) {
   if (!license) {
     return ''
@@ -14,7 +14,7 @@ function renderLicenseLink(license) {
   return `* [License](#license)`;
 }
 
-//
+//  return license section
 function renderLicenseSection(license) {
   if (!license) {
     return '';
@@ -26,6 +26,7 @@ This project is licensed under the ${license} license.
   `;
 }
 
+// generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
@@ -71,4 +72,5 @@ Email: ${data.email}
   `;
 }
 
+// export generateMarkdown function
 module.exports = generateMarkdown;

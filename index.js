@@ -1,10 +1,10 @@
-// 
+// required packages
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// array of questions for user
 const questions = [
     {
         type: "input",
@@ -63,12 +63,12 @@ const questions = [
     }
 ];
 
-//
+// write README file
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data);
 }
 
-//
+// initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
         console.log('Your readme.md is being generated...');
