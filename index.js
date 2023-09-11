@@ -65,7 +65,14 @@ const questions = [
 
 // write README file
 function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+    const dir = "./its in here";
+
+    // Check if directory exists and if not, create it
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
+    }
+
+    fs.writeFileSync(path.join(dir, fileName), data);
 }
 
 // initialize app
